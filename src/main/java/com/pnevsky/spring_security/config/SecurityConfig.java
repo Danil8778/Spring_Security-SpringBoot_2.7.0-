@@ -15,6 +15,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private PersonDetailsService personDetailsService;
 
+    @Autowired
     public SecurityConfig(PersonDetailsService personDetailsService) {
         this.personDetailsService = personDetailsService;
     }
