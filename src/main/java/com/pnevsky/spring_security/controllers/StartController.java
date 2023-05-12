@@ -23,4 +23,9 @@ public class StartController {
         return "hello";
     }
 
+    @GetMapping("/admin")
+    public String adminPage(){
+        return "admin";
+    }
+
 }

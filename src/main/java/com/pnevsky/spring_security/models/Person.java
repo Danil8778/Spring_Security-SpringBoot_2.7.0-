@@ -19,6 +19,9 @@ public class Person {
     @Column(name = "year_of_birth")
     int yearOfBirth;
 
+    @Column(name = "role")
+    String role;
+
 
     public Person() {
     }
@@ -58,6 +61,14 @@ public class Person {
 
     public void setYearOfBirth(int yearOfBirth) {
         this.yearOfBirth = yearOfBirth;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 
     @Override
