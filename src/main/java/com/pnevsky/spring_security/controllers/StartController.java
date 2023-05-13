@@ -5,9 +5,16 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import com.pnevsky.spring_security.services.AdminService;
 
 @Controller
 public class StartController {
+
+    private AdminService adminService;
+
+    public StartController(AdminService adminService) {
+        this.adminService = adminService;
+    }
 
     @GetMapping("/hello")
     public String helloPage(){
@@ -25,6 +32,7 @@ public class StartController {
 
     @GetMapping("/admin")
     public String adminPage(){
+        adminService.doAdminStaff();
         return "admin";
     }
 
